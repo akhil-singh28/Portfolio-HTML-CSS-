@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <div class="logo">Akhil Pratap Singh</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1 class="hero-animate delay-1">
+            Hello, I'm <span>Akhil</span>
+        </h1>
+        <p class="hero-animate delay-2">
+            Data Science | Machine Learning | Power BI
+        </p>
+
+        <div class="hero-buttons hero-animate delay-3">
+            <a href="#projects" class="btn">View My Work</a>
+            <a href="#" class="btn resume-btn">Download Resume</a>
+        </div>
+    </div>
+</section>
+<section id="about" class="section reveal">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate learner with a strong interest in Data Science,
+        Machine Learning, and Data Structures & Algorithms. I enjoy solving
+        real-world problems using data-driven approaches and building
+        clean, efficient solutions.
+    </p>
+</section>
+<section id="skills" class="section dark reveal">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="skill">Java</div>
+        <div class="skill">Machine Learning (Beginner)</div>
+        <div class="skill">Data Structures & Algorithms</div>
+        <div class="skill">Structured Query Language (SQL)</div>
+        <div class="skill">Data Visualization (Numpy, Pandas, Matplotlib, Seaborn)</div>
+        <div class="skill">Git & GitHub</div>
+    </div>
+</section>
+<section id="projects" class="section reveal">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Data Analysis Project</h3>
+            <p>College Attendance & Performance Analytics System</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Machine Learning Project</h3>
+            <p>Marks Prediction using ML models</p>
+        </div>
+    </div>
+</section>
+<section id="contact" class="section dark reveal">
+    <h2>Contact</h2>
+    <p>Email: akhil.singh_bca@gla.ac.in</p>
+    <p>GitHub: akhil-singh28</p>
+    <p>LinkedIn: akhil-pratap-singh</p>
+</section>
+
+<footer>
+    <p>© 2026 Akhil. All Rights Reserved.</p>
+</footer>
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+    reveals.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 150;
+
+        if (sectionTop < triggerPoint) {
+            section.classList.add("active");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
